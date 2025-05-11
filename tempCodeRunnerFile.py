@@ -1,1 +1,0 @@
-D:\PythonProject\Face_Recognition_DL\output\recognizer_updated.pickle

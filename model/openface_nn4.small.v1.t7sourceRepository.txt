@@ -1,1 +1,0 @@
-https://github.com/pyannote/pyannote-data/blob/master/openface.nn4.small2.v1.t7?form=MG0AV3

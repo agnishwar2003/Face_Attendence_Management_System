@@ -10,7 +10,7 @@
 - [Requirements](#requirements)  
 - [Setup Instructions](#setup-instructions)  
 - [Usage](#usage)  
-- [Code Highlights](#code-highlights)  
+- [Model Highlights](#Model-highlights)  
 - [Results and Discussion](#results-and-discussion)  
 - [Graphs and Visuals](#graphs-and-visuals)  
 - [Future Work](#future-work)  

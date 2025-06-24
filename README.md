@@ -154,11 +154,9 @@ streamlit run Web.py
 [INFO] Avg Confidence of Detections: 0.97
 [INFO] Confidence Range: Min=0.91, Max=1.00
 
-yaml
-Copy
-Edit
+![image](https://github.com/user-attachments/assets/74c00ad0-7b2c-410c-8077-2ec69fecb079)
 
-_Figure 19: Face Detection (SSD)_
+_Figure : Face Detection (SSD)_
 
 ---
 
@@ -173,11 +171,9 @@ _Figure 19: Face Detection (SSD)_
 [INFO] Avg Confidence of Detections: 0.80
 [INFO] Confidence Range: Min=0.42, Max=0.86
 
-yaml
-Copy
-Edit
+![image](https://github.com/user-attachments/assets/1e2cb9fc-44ed-4bc7-80d5-f4db6e7b49e9)
 
-_Figure 20: Face Detection (YOLOv8)_
+_Figure : Face Detection (YOLOv8)_
 
 ---
 
@@ -222,7 +218,9 @@ _Table 3: Classification Report_
 - Macro Average: Precision = 1.00, Recall = 1.00, F1-Score = 1.00  
 - Weighted Average: Precision = 1.00, Recall = 1.00, F1-Score = 1.00  
 
-_Figure 21: ROC Curve of Training Performance_
+![roc_curve_Openface10](https://github.com/user-attachments/assets/0b9a3adf-6171-4295-b096-bbcf1dc6e87d)
+
+_Figure : ROC Curve of Training Performance_
 
 ---
 

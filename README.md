@@ -314,4 +314,4 @@ During the development and deployment of the face recognition attendance system,
 
 **Agnishwar Das**  
 Email: agnishwar.das.2003@gmail.com  
-GitHub: [[https://github.com/yourusername](https://github.com/yourusername)  ](https://github.com/agnishwar2003)
+GitHub: https://github.com/agnishwar2003

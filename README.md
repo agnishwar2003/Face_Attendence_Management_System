@@ -79,7 +79,6 @@ Install dependencies using:
 ```bash
 pip install opencv-python numpy imutils ultralytics gfpgan streamlit pandas scikit-learn
 ```
----
 
 ## Setup Instructions
 
@@ -108,25 +107,29 @@ streamlit run Web.py
 ## Usage
 
 ### Home Page
+
 - Introduction and usage instructions.
 
 ### Take Attendance
-- Start the webcam, detect faces, recognize identities, and mark attendance automatically.
-- View real-time results and preview detected faces.
+
+- Start the webcam, detect faces, recognize identities, and mark attendance automatically.  
+- View real-time results and preview detected faces.  
 - Download attendance CSV.
 
 ### View Attendance
-- Load saved attendance records.
-- Filter by name or date.
+
+- Load saved attendance records.  
+- Filter by name or date.  
 - Download filtered attendance CSV.
 
 ---
 
 ## Code Highlights
-- **Face Detection:** SSD Caffe model and YOLOv8 (Ultralytics) model integration.
-- **Face Embeddings:** OpenFace Torch `.t7` model loaded with OpenCV DNN.
-- **Recognition:** SVM classifier with probability thresholding.
-- **Face Enhancement:** GFPGAN to improve recognition on low-resolution faces.
+
+- **Face Detection:** SSD Caffe model and YOLOv8 (Ultralytics) model integration.  
+- **Face Embeddings:** OpenFace Torch `.t7` model loaded with OpenCV DNN.  
+- **Recognition:** SVM classifier with probability thresholding.  
+- **Face Enhancement:** GFPGAN to improve recognition on low-resolution faces.  
 - **Real-time Streaming:** Streamlit UI with start/stop camera controls, result display, and attendance export.
 
 ---
@@ -242,6 +245,24 @@ _Table 4: Performance During Recognition_
 
 ---
 
+## 4.10 Challenges Encountered
+
+During the development and deployment of the face recognition attendance system, several challenges were faced, stemming from both technological limitations and environmental/hardware constraints:
+
+1. **False Positives**  
+   The system occasionally misidentified non-face regions (e.g., posters, shadows) as faces, especially with YOLOv8 detection. These false detections sometimes received moderate confidence scores from the SVM classifier, leading to incorrect attendance entries.
+
+2. **Low-Light Performance**  
+   Poor lighting conditions degraded detection and recognition accuracy. YOLOv8 showed inconsistent face detection with missed or fluctuating bounding boxes, while OpenFace embeddings had lower confidence, causing misclassifications in dim or unevenly lit environments.
+
+3. **Similar Face Issues**  
+   Individuals with visually similar facial features produced overlapping embeddings in feature space, causing confusion in the classifier. This led to occasional misclassifications and incorrect attendance markings for such visually similar faces.
+
+4. **Hardware Limitations**  
+   Running computationally intensive models like YOLOv8 and OpenFace embedding extraction on CPU without GPU acceleration resulted in slow inference speeds, with frame rates often dropping below 10 FPS. This impaired real-time performance and interface responsiveness.
+
+---
+
 ## Future Work
 
 - Implement GPU acceleration for faster real-time processing.  
@@ -259,11 +280,8 @@ _Table 4: Performance During Recognition_
 
 ---
 
-## Contact
+# Contact
 
 **Agnishwar Das**  
 Email: your-email@example.com  
 GitHub: [https://github.com/yourusername](https://github.com/yourusername)  
-
----
-

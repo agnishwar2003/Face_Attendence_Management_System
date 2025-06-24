@@ -313,5 +313,5 @@ During the development and deployment of the face recognition attendance system,
 # Contact
 
 **Agnishwar Das**  
-Email: your-email@example.com  
-GitHub: [https://github.com/yourusername](https://github.com/yourusername)  
+Email: agnishwar.das.2003@gmail.com  
+GitHub: [[https://github.com/yourusername](https://github.com/yourusername)  ](https://github.com/agnishwar2003)

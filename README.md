@@ -103,3 +103,167 @@ pip install opencv-python numpy imutils ultralytics gfpgan streamlit pandas scik
 
 ```bash
 streamlit run Web.py
+```
+
+## Usage
+
+### Home Page
+- Introduction and usage instructions.
+
+### Take Attendance
+- Start the webcam, detect faces, recognize identities, and mark attendance automatically.
+- View real-time results and preview detected faces.
+- Download attendance CSV.
+
+### View Attendance
+- Load saved attendance records.
+- Filter by name or date.
+- Download filtered attendance CSV.
+
+---
+
+## Code Highlights
+- **Face Detection:** SSD Caffe model and YOLOv8 (Ultralytics) model integration.
+- **Face Embeddings:** OpenFace Torch `.t7` model loaded with OpenCV DNN.
+- **Recognition:** SVM classifier with probability thresholding.
+- **Face Enhancement:** GFPGAN to improve recognition on low-resolution faces.
+- **Real-time Streaming:** Streamlit UI with start/stop camera controls, result display, and attendance export.
+
+---
+
+## Results and Discussion
+
+### 5.1 Accuracy Metrics
+
+#### 5.1.1 Face Detection Performance
+
+**Face Detection using SSD and Caffe Framework:**
+
+- Total frames processed: 245  
+- Frames with face detected: 245 (100%)  
+- Average confidence score: 0.97 (range 0.91 - 1.00)  
+- Average processing speed: 16.67 FPS  
+
+[INFO] Total Frames Processed: 245
+[INFO] Frames with Face Detected: 245
+[INFO] Final Detection Rate: 100.00%
+[INFO] Average FPS: 16.67
+[INFO] Avg Confidence of Detections: 0.97
+[INFO] Confidence Range: Min=0.91, Max=1.00
+
+yaml
+Copy
+Edit
+
+_Figure 19: Face Detection (SSD)_
+
+---
+
+**Face Detection using YOLOv8:**
+
+- Detection rate: 100%  
+- Average confidence: 0.80 (range 0.42 - 0.86)  
+- Average FPS: 13.02 (CPU)  
+
+[INFO] Final Detection Rate: 100.00%
+[INFO] Average FPS: 13.02
+[INFO] Avg Confidence of Detections: 0.80
+[INFO] Confidence Range: Min=0.42, Max=0.86
+
+yaml
+Copy
+Edit
+
+_Figure 20: Face Detection (YOLOv8)_
+
+---
+
+#### 5.1.2 Model Performance During Training
+
+| Metric    | Score  |
+|-----------|--------|
+| Accuracy  | 0.9983 |
+| Precision | 0.9983 |
+| Recall    | 0.9983 |
+
+_Table 1: Performance During Training_
+
+**Confusion Matrix:**
+
+| Actual \ Predicted | 0   | 1   | 2   | 3   | 4   | 5   |
+|--------------------|-----|-----|-----|-----|-----|-----|
+| 0                  | 500 | 0   | 0   | 0   | 0   | 0   |
+| 1                  | 0   | 500 | 0   | 0   | 0   | 0   |
+| 2                  | 0   | 2   | 496 | 0   | 0   | 0   |
+| 3                  | 0   | 0   | 1   | 499 | 0   | 0   |
+| 4                  | 0   | 0   | 0   | 0   | 500 | 0   |
+| 5                  | 0   | 0   | 0   | 0   | 0   | 500 |
+
+_Table 2: Confusion Matrix_
+
+**Classification Report:**
+
+| Class | Precision | Recall | F1-Score | Support |
+|-------|-----------|--------|----------|---------|
+| 0     | 1.00      | 1.00   | 1.00     | 500     |
+| 1     | 0.99      | 1.00   | 1.00     | 500     |
+| 2     | 1.00      | 1.00   | 1.00     | 500     |
+| 3     | 1.00      | 0.99   | 1.00     | 500     |
+| 4     | 1.00      | 1.00   | 1.00     | 500     |
+| 5     | 1.00      | 1.00   | 1.00     | 500     |
+
+_Table 3: Classification Report_
+
+**Overall Metrics:**  
+- Accuracy: 1.00  
+- Macro Average: Precision = 1.00, Recall = 1.00, F1-Score = 1.00  
+- Weighted Average: Precision = 1.00, Recall = 1.00, F1-Score = 1.00  
+
+_Figure 21: ROC Curve of Training Performance_
+
+---
+
+#### 5.1.3 Face Recognition Performance
+
+| Metric                          | Value  |
+|--------------------------------|--------|
+| Total Frames Processed          | 144    |
+| Total Faces Detected            | 144    |
+| Recognized Faces                | 124    |
+| Unknown Faces                  | 20     |
+| Recognition Rate                | 86.11% |
+| Average Confidence (Recognized) | 0.92   |
+
+_Table 4: Performance During Recognition_
+
+- Detection rate was 100% across all frames.  
+- Recognition accuracy was 86.11% with high confidence of 92%.  
+- The remaining 13.89% were classified as unknown due to confidence thresholds.
+
+---
+
+## Future Work
+
+- Implement GPU acceleration for faster real-time processing.  
+- Increase dataset size and diversity for better generalization.  
+- Support multi-face attendance in crowded scenes.  
+- Integrate with institutional attendance management systems.
+
+---
+
+## Acknowledgments
+
+- OpenFace: [https://cmusatyalab.github.io/openface/](https://cmusatyalab.github.io/openface/)  
+- Ultralytics YOLOv8: [https://ultralytics.com/](https://ultralytics.com/)  
+- GFPGAN: [https://github.com/TencentARC/GFPGAN](https://github.com/TencentARC/GFPGAN)  
+
+---
+
+## Contact
+
+**Agnishwar Das**  
+Email: your-email@example.com  
+GitHub: [https://github.com/yourusername](https://github.com/yourusername)  
+
+---
+

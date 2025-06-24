@@ -78,3 +78,28 @@ Install dependencies using:
 
 ```bash
 pip install opencv-python numpy imutils ultralytics gfpgan streamlit pandas scikit-learn
+
+---
+
+## Setup Instructions
+
+1. **Clone the repository** to your local machine.
+
+2. **Download the required models:**  
+   - OpenFace embedding model (`openface.nn4.small2.v1.t7`)  
+   - SSD face detection model:  
+     - `deploy.prototxt.txt`  
+     - `res10_300x300_ssd_iter_140000.caffemodel`  
+   - YOLOv8 face detection weights (`yolov8n-face.pt`)  
+   - GFPGAN pretrained weights (`GFPGANv1.4.pth`)
+
+3. **Place model files** in directories according to paths specified in the code.
+
+4. **Prepare dataset and train SVM classifier:**  
+   - Extract embeddings using OpenFace on your face images.  
+   - Train SVM classifier and save the model and label encoder as `.pickle` files.
+
+5. **Run the Streamlit app:**
+
+```bash
+streamlit run Web.py

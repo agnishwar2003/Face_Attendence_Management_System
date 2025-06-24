@@ -78,7 +78,7 @@ Install dependencies using:
 
 ```bash
 pip install opencv-python numpy imutils ultralytics gfpgan streamlit pandas scikit-learn
-
+```
 ---
 
 ## Setup Instructions

@@ -12,9 +12,10 @@
 - [Usage](#usage)  
 - [Code Highlights](#code-highlights)  
 - [Results and Discussion](#results-and-discussion)  
+- [Graphs and Visuals](#graphs-and-visuals)  
 - [Future Work](#future-work)  
 - [Acknowledgments](#acknowledgments)  
-- [Contact](#contact)  
+- [Contact](#contact)    
 
 ---
 
@@ -240,6 +241,46 @@ _Table 4: Performance During Recognition_
 - Detection rate was 100% across all frames.  
 - Recognition accuracy was 86.11% with high confidence of 92%.  
 - The remaining 13.89% were classified as unknown due to confidence thresholds.
+
+---
+
+## 5.1.3 Graphs and Visuals
+
+### Facial Detection and Dataset Creation Phase
+
+![03  Screenshot (387)](https://github.com/user-attachments/assets/f62ded7a-e271-47e7-ad45-c88ade82ae34)
+
+_Figure : Real Time Dataset Creation_
+
+![02  Screenshot 2025-06-07 094219](https://github.com/user-attachments/assets/dcc86f5e-0da8-47d8-8492-a968233a944b)
+
+_Figure : Sample Image Dataset_
+
+### Facial Embedding Generation 
+
+![embedding_visualization](https://github.com/user-attachments/assets/8e2ca03b-8ce0-4e3d-b2ed-1e14070ed95a)
+
+_Figure : Visualization of Each classes Embedding_
+
+### Recognition and Information Visualization
+
+![04  Screenshot (390)](https://github.com/user-attachments/assets/088aedf8-1122-417f-8207-3447aa74b225)
+
+_Figure : Visualizing Class_Label along with Student Information_
+
+### Web User Interface
+
+![05  Screenshot (396)](https://github.com/user-attachments/assets/5d23970a-f25a-42b6-86ed-af55b3ce6e33)
+
+_Figure : Home page_
+
+![06  Screenshot (397)](https://github.com/user-attachments/assets/7056e715-1cc5-43f2-9974-f2124038cb57)
+
+_Figure : Face Scan and Attendance Marking Page_
+
+![07  Screenshot (399)](https://github.com/user-attachments/assets/a8cf64bb-52ab-403b-baf6-79e784b332e8)
+
+_Figure : View Attendance Page_
 
 ---
 

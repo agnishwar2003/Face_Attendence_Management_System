@@ -14,7 +14,6 @@
 - [Results and Discussion](#results-and-discussion)  
 - [Graphs and Visuals](#graphs-and-visuals)  
 - [Future Work](#future-work)  
-- [Acknowledgments](#acknowledgments)  
 - [Contact](#contact)    
 
 ---
@@ -125,7 +124,7 @@ streamlit run Web.py
 
 ---
 
-## Code Highlights
+## Model Highlights
 
 - **Face Detection:** SSD Caffe model and YOLOv8 (Ultralytics) model integration.  
 - **Face Embeddings:** OpenFace Torch `.t7` model loaded with OpenCV DNN.  
@@ -308,14 +307,6 @@ During the development and deployment of the face recognition attendance system,
 - Increase dataset size and diversity for better generalization.  
 - Support multi-face attendance in crowded scenes.  
 - Integrate with institutional attendance management systems.
-
----
-
-## Acknowledgments
-
-- OpenFace: [https://cmusatyalab.github.io/openface/](https://cmusatyalab.github.io/openface/)  
-- Ultralytics YOLOv8: [https://ultralytics.com/](https://ultralytics.com/)  
-- GFPGAN: [https://github.com/TencentARC/GFPGAN](https://github.com/TencentARC/GFPGAN)  
 
 ---
 
